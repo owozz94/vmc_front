@@ -4,9 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// eslint-disable-next-line
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
