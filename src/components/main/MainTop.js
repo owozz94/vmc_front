@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ProjectIntro from './ProjectIntro'
-import GoogleLogin from './GoogleLogin'
+import GoogleButton from './GoogleButton'
 
 export default class MainTop extends Component {
     static propTypes = {
@@ -12,7 +12,7 @@ export default class MainTop extends Component {
         return (
             <div>
                 <ProjectIntro></ProjectIntro>
-                <GoogleLogin></GoogleLogin>
+                <GoogleButton></GoogleButton>
             </div>
         )
     }
