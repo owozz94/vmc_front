@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import MainTop from './MainTop'
+import MainBottom from './MainBottom'
 
-export default class GoogleLogin extends Component {
+export default class Main extends Component {
     static propTypes = {
         prop: PropTypes
     }
@@ -9,8 +11,10 @@ export default class GoogleLogin extends Component {
     render() {
         return (
             <div>
-                <button>google로 로그인</button>
+                <MainTop></MainTop>
+                <MainBottom></MainBottom>
             </div>
         )
     }
 }
+

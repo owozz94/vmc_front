@@ -1,0 +1,57 @@
+{
+    "members": [{
+            "id": "1",
+            "part": "Frontend",
+            "name": "가가가",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        },
+        {
+            "id": "2",
+            "part": "Frontend",
+            "name": "나나나",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        },
+        {
+            "id": "3",
+            "part": "Backend",
+            "name": "다다다",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        },
+        {
+            "id": "4",
+            "part": "Backend",
+            "name": "라라라",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        },
+        {
+            "id": "5",
+            "part": "Backend",
+            "name": "마마마",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        },
+        {
+            "id": "6",
+            "part": "Backend",
+            "name": "바바바",
+            "image": "img/profile1.png",
+            "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
+            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "git": "https://"
+        }
+    ]
+}

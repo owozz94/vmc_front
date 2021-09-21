@@ -1,0 +1,55 @@
+.card-outline {
+  display: inline-block;
+  width: 30%;
+}
+
+.card-outline .card {
+  padding: 0 20px;
+  display: inline-block;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+}
+
+.card-outline .card .profileImg {
+  width: 60%;
+  display: inline-block;
+  margin: 30px auto;
+}
+
+.card-outline .card .card-body {
+  height: 50%;
+}
+
+.card-outline .card .card-body .card-body_title {
+  font-size: 1rem;
+}
+
+.card-outline .card .card-body .card-text {
+  font-size: 0.8rem;
+}
+
+.card-outline .card .card-body .card-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-outline .card .card-body .card-text ul li {
+  margin-right: 5px;
+}
+
+.card-outline .card .card-body .btn-box {
+  width: 100%;
+  text-align: right;
+}
+
+.card-outline .card .card-body .btn-box .btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=MemberInfo.css.map */
