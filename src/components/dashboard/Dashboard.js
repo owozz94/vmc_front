@@ -19,7 +19,7 @@ import { mainListItems } from './NavItems';
 import MyCertifications from './MyCertifications';
 import MarketBanner from './MarketBanner';
 import Orders from './Orders';
-import App from '../../App'
+import App from '../../Routes'
 
 
 function Copyright(props) {
@@ -34,7 +34,6 @@ function Copyright(props) {
     </Typography>
   );
 }
-
 //왼쪽 nav 사이즈
 const drawerWidth = 240;
 
