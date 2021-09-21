@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styles from '../../css/GoogleLogin.module.css'
-import {Button} from 'react-bootstrap'
+import CertiList from './CertiList'
+import styles from '../../css/Mycertification.css'
 
-export default class GoogleLogin extends Component {
+
+export default class Mycertification extends Component {
     static propTypes = {
         prop: PropTypes
     }
@@ -11,7 +12,7 @@ export default class GoogleLogin extends Component {
     render() {
         return (
             <div>
-                <Button variant="primary">google로 로그인</Button>
+                <CertiList></CertiList>
             </div>
         )
     }

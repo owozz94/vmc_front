@@ -53,5 +53,24 @@
             "skill": ["HTML", "CSS", "Javascript", "react"],
             "git": "https://"
         }
-    ]
+    ],
+    "certiList": [{
+        "id": "1",
+        "coin": "BTC",
+        "start": "2019.02.01",
+        "end": "2019.08.01",
+        "amount": "0.76",
+        "app": "bithumb",
+        "rate": "+15",
+        "profit": "1129,000"
+    }, {
+        "id": "2",
+        "coin": "BTC",
+        "start": "2020.02.01",
+        "end": "2020.08.01",
+        "amount": "1.08",
+        "app": "upbit",
+        "rate": "+7",
+        "profit": "500,000"
+    }]
 }
