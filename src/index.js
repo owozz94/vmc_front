@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Main from './components/main/Main';
-import reportWebVitals from './reportWebVitals';
-import Routes from './Routes';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Box from "@mui/material/Box";
+import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import Main from "./components/main/Main";
+import reportWebVitals from "./reportWebVitals";
+import Routes from "./Routes";
 // eslint-disable-next-line
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +16,7 @@ ReactDOM.render(
       <Routes />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
