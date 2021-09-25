@@ -14,5 +14,5 @@ export default class GoogleLogin extends Component {
                 <Button variant="primary">google로 로그인</Button>
             </div>
         )
-    }
+    } 
 }
