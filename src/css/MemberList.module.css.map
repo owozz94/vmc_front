@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAMI,UANM,CAMN,EAAE,CAAC;EACC,cAAc,EAAE,UACpB;CAAC;;AARL,AASI,UATM,CASN,MAAM,CAAC;EACH,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CACjC",
+    "sources": [
+        "MemberList.module.scss"
+    ],
+    "names": [],
+    "file": "MemberList.module.css"
+}

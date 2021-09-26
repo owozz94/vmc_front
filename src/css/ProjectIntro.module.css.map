@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,MAAM;CACtB;;AAED,AAAA,MAAM,CAAC;EACH,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "ProjectIntro.module.scss"
+    ],
+    "names": [],
+    "file": "ProjectIntro.module.css"
+}

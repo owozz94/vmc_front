@@ -21,15 +21,15 @@ export default function Main() {
       })
       .catch((response) => {
         console.log(response);
-      });
-  };
+      })
+  }//aa end
+        return (
+            <div>
+                 <button onClick={aa}>test </button>
+                <MainTop></MainTop>
+                <MainBottom></MainBottom>
+            </div>
+        )
 
-  return (
-    <div>
-      main입니다.
-      <button onClick={aa}>test </button>
-      <MainTop></MainTop>
-      <MainBottom></MainBottom>
-    </div>
-  );
-}
+
+} //Main end
