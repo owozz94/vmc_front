@@ -1,28 +1,17 @@
-import React, { Component } from 'react'
-<<<<<<< HEAD
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import CertiList from "./CertiList";
 
 export default class Mycertification extends Component {
-    render() {
-        return (
-            <div>
-                Mycertification
-=======
-import PropTypes from 'prop-types'
-import CertiList from './CertiList'
-import styles from '../../css/Mycertification.css'
+  static propTypes = {
+    prop: PropTypes,
+  };
 
-
-export default class Mycertification extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
-
-    render() {
-        return (
-            <div>
-                <CertiList></CertiList>
->>>>>>> 204f2e74c34e533d263bd46e6e98c54e9a882c8b
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <CertiList></CertiList>
+      </div>
+    );
+  }
 }
