@@ -2,55 +2,55 @@
     "members": [{
             "id": "1",
             "part": "Frontend",
-            "name": "가가가",
+            "name": "김모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         },
         {
             "id": "2",
             "part": "Frontend",
-            "name": "나나나",
+            "name": "이모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         },
         {
             "id": "3",
             "part": "Backend",
-            "name": "다다다",
+            "name": "서모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         },
         {
             "id": "4",
             "part": "Backend",
-            "name": "라라라",
+            "name": "황모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         },
         {
             "id": "5",
             "part": "Backend",
-            "name": "마마마",
+            "name": "양모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         },
         {
             "id": "6",
             "part": "Backend",
-            "name": "바바바",
+            "name": "정모모",
             "image": "img/profile1.png",
             "intro": "자기소개란입니다. 자신을 어필할 수 있는 내용을 작성하세요. 자기소개란입니다. 지신을 어필할 수 있는 내용을 작성하세요.",
-            "skill": ["HTML", "CSS", "Javascript", "react"],
+            "skill": ["교육수료", "경력사항", "스킬"],
             "git": "https://"
         }
     ],

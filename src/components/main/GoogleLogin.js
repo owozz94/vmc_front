@@ -11,7 +11,7 @@ export default class GoogleLogin extends Component {
     render() {
         return (
             <div>
-                <Button variant="primary">google로 로그인</Button>
+                <Button variant="primary" className={styles.googleBtn}>google로 로그인</Button>
             </div>
         )
     } 

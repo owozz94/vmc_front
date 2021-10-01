@@ -1,11 +1,25 @@
-.container {
-    padding: 150px 0;
-    width: 100%;
-    background: rgb(233, 233, 233);
-    // border: 10px solid red;
-    // .section {
-    //     border: 1px solid black;
-    //     padding-top: 40vh;
-    //     margin-left: 5%;
-    // }
-}
+    .container {
+        // padding: 150px 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        // border: 10px solid red;
+        // .section {
+        //     border: 1px solid black;
+        //     padding-top: 40vh;
+        //     margin-left: 5%;
+        // }
+        article {
+            // border: 1px solid rgba(0, 0, 0, 0.5);
+            width: 80%;
+            // margin: 0 5%;
+            margin: auto;
+            padding: 150px 0;
+            //     justify-content: space-between;
+            h2 {
+                text-transform: capitalize;
+                color: white;
+                font-size: 3rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }

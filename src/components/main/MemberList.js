@@ -12,10 +12,9 @@ export default class MemberList extends Component {
 
     render() {
         return (
-            <div className="container">
-                <h1>project members</h1>
-                <div className="cards">
-                    <Row xs={1} md={3} className="g-4">
+            <div className={styles.container}>
+                <div className={styles.cards}>
+                    <Row xs={1} lg={3} md={2} className="g-4">
                     {/* {Array.from({ length: 0 }).map((_, idx) => ( */}
                         {dummy.members.map(member => (
                             <Col>
