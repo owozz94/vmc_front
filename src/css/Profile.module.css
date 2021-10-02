@@ -1,0 +1,15 @@
+.ProfileContent {
+  padding: 0 20%;
+  margin-top: 10vh;
+}
+
+.ProfileContent .deleteContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ProfileContent .deleteContent > p {
+  margin-right: 8px;
+}
+/*# sourceMappingURL=Profile.module.css.map */
