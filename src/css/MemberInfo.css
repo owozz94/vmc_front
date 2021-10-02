@@ -1,0 +1,77 @@
+.card-outline {
+  display: inline-block;
+}
+
+.card-outline .card {
+  width: 300px;
+  padding: 30px 10px;
+  margin-bottom: 80px;
+  display: inline-block;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-outline .card .cardTop {
+  width: 60%;
+  margin: auto;
+}
+
+.card-outline .card .cardTop .rounded-circle {
+  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.card-outline .card .card-body {
+  height: 50%;
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-weight: bolder !important;
+  padding-bottom: 0 !important;
+}
+
+.card-outline .card .card-body .card-body_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-outline .card .card-body .card-body_title p {
+  font-size: 1.2rem;
+  margin: 0 8px 0 0;
+}
+
+.card-outline .card .card-body .card-body_title span {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.card-outline .card .card-body .card-text {
+  font-size: 0.8rem;
+}
+
+.card-outline .card .card-body .card-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-outline .card .card-body .card-text ul li {
+  margin-right: 5px;
+}
+
+.card-outline .card .card-body .btn-box {
+  width: 100%;
+  text-align: right;
+}
+
+.card-outline .card .card-body .btn-box .btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=MemberInfo.css.map */

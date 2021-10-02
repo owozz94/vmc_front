@@ -1,0 +1,9 @@
+.Carousel .CarouselItem {
+  width: 100%;
+}
+
+.Carousel .CarouselItem img {
+  width: 100%;
+  opacity: 0.3;
+}
+/*# sourceMappingURL=AboutSlide.module.css.map */

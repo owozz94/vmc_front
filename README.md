@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+### 9/20 변경 및 참고사항
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### components/dashboard
 
-## Available Scripts
+- Dashboard.js
+    - Mypage.js → Profile.js
+- MarketBanner.js : 배너
+    - 빗썸, 코빗, 업비트, 코인원
+- MyCertifications.js
+    - data : 원래 템플렛에 들어있던 임시데이터. 참고용으로 삭제 안함.
+    - 인증서가 들어갈 문서
+- NavItem.js
+    - 왼쪽 nav 영역.
+    - Route 설정해야됨.
+    - Route 설정은 Dashboard에서 해야됨.
 
-In the project directory, you can run:
+        NavItem.js에서 하면 Nav 영역에서 페이지 전환됨.
 
-### `npm start`
+        ※ 혜민님 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Orders.js
+    - 임시 데이터.
+    - id, 날짜, 이름, 거래소, 코인, 거래량, 수익률, 수익금을 파라미터로 받을 createData() 함수 만듦.
+    - 현재는 임시 데이터가 들어있음.
+    - ※ 추가로 더 필요한 파라미터 값이 있으면 댓글 부탁드려요!
+- api 폴더 추가.
+- Certification.js, MyCertification, Profile UI 작성해야됨.
+- post
+- access_token만 받자
+- googleID
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 토큰 헤더 바디 id토큰
 
-### `npm test`
+- 로그인 response 이후 jwt도 보내준다고함.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 토큰이 만료되면 로그인 유지해야돼서 서버로 요구하는 토큰을 보내야됨.

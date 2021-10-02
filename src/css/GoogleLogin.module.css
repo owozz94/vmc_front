@@ -1,0 +1,28 @@
+.googleBtn {
+  background: navy;
+  color: white;
+  border: transparent;
+  padding: 5px 25px;
+  margin-top: 30px;
+  -webkit-animation: moveGoogle 1.5s forwards;
+          animation: moveGoogle 1.5s forwards;
+}
+
+@-webkit-keyframes moveGoogle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveGoogle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=GoogleLogin.module.css.map */

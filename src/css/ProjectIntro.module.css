@@ -1,0 +1,58 @@
+.title {
+  font-size: 5rem;
+  font-weight: bolder;
+  -webkit-animation: moveTitle 1.5s forwards;
+          animation: moveTitle 1.5s forwards;
+}
+
+@-webkit-keyframes moveTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.intro {
+  display: inline-block;
+  margin-top: 15px;
+  -webkit-animation: moveIntro 1.5s forwards;
+          animation: moveIntro 1.5s forwards;
+}
+
+@-webkit-keyframes moveIntro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIntro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=ProjectIntro.module.css.map */

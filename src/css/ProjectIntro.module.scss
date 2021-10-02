@@ -1,0 +1,33 @@
+.title {
+    font-size: 5rem;
+    font-weight: bolder;
+    animation: moveTitle 1.5s forwards;
+}
+
+@keyframes moveTitle {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.intro {
+    display: inline-block;
+    margin-top: 15px;
+    animation: moveIntro 1.5s forwards;
+}
+
+@keyframes moveIntro {
+    0% {
+        opacity: 0;
+        // transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        // transform: translateX(0px);
+    }
+}

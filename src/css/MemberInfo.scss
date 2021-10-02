@@ -1,0 +1,65 @@
+.card-outline {
+    display: inline-block;
+    // padding: 0 2rem;
+    .card {
+        width: 300px;
+        padding: 30px 10px;
+        margin-bottom: 80px;
+        display: inline-block;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        // border-radius: 25px;
+        .cardTop {
+            width: 60%;
+            margin: auto;
+            // .profileImg {
+            .rounded-circle {
+                width: 100%;
+                display: inline-block;
+                margin: 0 auto;
+            }
+        }
+        .card-body {
+            height: 50%;
+            color: rgba(0, 0, 0, 0.7) !important;
+            font-weight: bolder !important;
+            padding-bottom: 0 !important;
+            .card-body_title {
+                // text-align: center;
+                display: flex;
+                // justify-content: space-between;
+                align-items: flex-end;
+                padding-bottom: 10px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                p {
+                    font-size: 1.2rem;
+                    margin: 0 8px 0 0;
+                }
+                span {
+                    font-size: 0.8rem;
+                    color: rgba(0, 0, 0, 0.4) !important;
+                }
+            }
+            .card-text {
+                font-size: 0.8rem;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    // display: flex;
+                    li {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .btn-box {
+                width: 100%;
+                text-align: right;
+                .btn {
+                    display: inline-block;
+                    font-size: 0.8rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
