@@ -1,6 +1,26 @@
 .container {
-  padding: 150px 0;
   width: 100%;
-  background: #e9e9e9;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.container h1 {
+  width: 80%;
+  margin: auto;
+  padding-top: 120px;
+  color: white;
+  font-size: 3.6rem;
+}
+
+.container article {
+  width: 80%;
+  margin: auto;
+  padding: 120px 0;
+}
+
+.container article h2 {
+  text-transform: capitalize;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
 }
 /*# sourceMappingURL=MainBottom.module.css.map */

@@ -4,4 +4,14 @@
     border: transparent;
     padding: 5px 25px;
     margin-top: 30px;
+    animation: moveGoogle 1.5s forwards;
+}
+
+@keyframes moveGoogle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

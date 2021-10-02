@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ProjectIntro from "./ProjectIntro";
-import GoogleButton from "./GoogleButton";
+import ProjectTitle from "./ProjectTitle";
+import GoogleLogin from "./GoogleLogin";
+import styles from "../../css/MainTop.module.css";
+// className = {styles.(클래스명)}
 export default class MainTop extends Component {
   static propTypes = {
     prop: PropTypes,
@@ -10,8 +12,12 @@ export default class MainTop extends Component {
   render() {
     return (
       <div>
-        <ProjectIntro></ProjectIntro>
-        <GoogleButton></GoogleButton>
+        <div className={styles.container}>
+          <section className={styles.section}>
+            <ProjectTitle></ProjectTitle>
+            <GoogleLogin></GoogleLogin>
+          </section>
+        </div>
       </div>
     );
   }

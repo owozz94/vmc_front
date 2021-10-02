@@ -8,12 +8,15 @@ export default function MemberInfo (props) {
 
     return (
             <div className="card-outline">
-                <Card  className="card" style={{ width: '18rem' }} border="light" text="muted">
-                    <Image className="profileImg" src={props.image} roundedCircle />
-                    {/* <Card.Img className="profileImg" variant="top" src={props.image} /> */}
+                <Card  className="card" border="light" text="muted">
+                    <div className="cardTop">
+                        <Image className={styles.profileImg} src={props.image} roundedCircle />
+                    </div>
+                    {/* <Card.Img className="profileImg" variant="top" src={props.image} bsPrefix="card-img"/> */}
                     <Card.Body className="card-body">
                         <Card.Title className="card-body_title">
-                            {props.part} / {props.name}
+                            <p>{props.name}</p>
+                            <span>{props.part}</span>
                         </Card.Title>
                         <Card.Text className="card-text">
                             <p className="introduction">{props.intro}</p>
