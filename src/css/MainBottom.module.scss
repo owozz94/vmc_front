@@ -8,18 +8,25 @@
         //     padding-top: 40vh;
         //     margin-left: 5%;
         // }
+        h1 {
+            width: 80%;
+            margin: auto;
+            padding-top: 120px;
+            color: white;
+            font-size: 3.6rem;
+        }
         article {
             // border: 1px solid rgba(0, 0, 0, 0.5);
             width: 80%;
             // margin: 0 5%;
             margin: auto;
-            padding: 150px 0;
+            padding: 120px 0;
             //     justify-content: space-between;
             h2 {
                 text-transform: capitalize;
                 color: white;
-                font-size: 3rem;
-                margin-bottom: 3rem;
+                font-size: 1.8rem;
+                margin-bottom: 2.5rem;
             }
         }
     }

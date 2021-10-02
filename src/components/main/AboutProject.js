@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import ProjectSlide from './AboutSlide'
+import { Button } from 'react-bootstrap'
 
 export default class AboutProject extends Component {
     static propTypes = {
@@ -9,7 +11,8 @@ export default class AboutProject extends Component {
     render() {
         return (
             <div>
-                프로젝트 소개 내용입니다
+                <ProjectSlide></ProjectSlide>               
+                <Button variant="primary">증명서 발급 매뉴얼</Button> 
             </div>
         )
     }

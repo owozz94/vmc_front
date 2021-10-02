@@ -13,12 +13,13 @@ export default class MainBottom extends Component {
         return (
             <div> 
                 <div className={styles.container}>
+                    <h1>about VMC</h1>
                     <article>
-                        <h2>about project</h2>
+                        <h2>서비스 소개</h2>
                         <AboutProject></AboutProject>
                     </article>
                     <article>
-                        <h2>members</h2>
+                        <h2>프로젝트 구성원</h2>
                         <MemberList></MemberList>                
                     </article>
                 </div>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAGI,SAHK,CAGL,aAAa,CAAC;EACV,KAAK,EAAE,IAAI;CAad;;AAjBL,AAKQ,SALC,CAGL,aAAa,CAET,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,GAAG;CACf",
+    "sources": [
+        "AboutSlide.module.scss"
+    ],
+    "names": [],
+    "file": "AboutSlide.module.css"
+}
