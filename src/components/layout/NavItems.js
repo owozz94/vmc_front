@@ -8,9 +8,10 @@ import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 
 //NavButton
+//   <ListItem button> << 쓰면 dataGrid랑 충돌 일어남.
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -20,7 +21,7 @@ export const mainListItems = (
       </Link>
     </ListItem>
 
-    <ListItem button>
+    <ListItem>
       <ListItemIcon>
         <BrightnessAutoIcon />
       </ListItemIcon>
@@ -29,7 +30,7 @@ export const mainListItems = (
         Certification{" "}
       </Link>
     </ListItem>
-    <ListItem button>
+    <ListItem>
       <ListItemIcon>
         <ClassIcon />
       </ListItemIcon>
@@ -38,7 +39,7 @@ export const mainListItems = (
         My Certification{" "}
       </Link>
     </ListItem>
-    <ListItem button>
+    <ListItem>
       <ListItemIcon>
         <PersonIcon />
       </ListItemIcon>

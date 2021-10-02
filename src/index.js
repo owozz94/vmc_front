@@ -1,14 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import Box from "@mui/material/Box";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import Main from "./components/main/Main";
 import reportWebVitals from "./reportWebVitals";
 import Routes from "./Routes";
 // eslint-disable-next-line
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>

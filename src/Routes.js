@@ -7,6 +7,7 @@ import Certification from "./components/certification/Certification";
 import Mycertification from "./components/mycertification/Mycertification";
 import Profile from "./components/profile/Profile";
 import Sub from "./components/layout/Sub";
+import CertificationUrl from "./components/mycertification/CertificationUrl";
 
 export default class Routes extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class Routes extends Component {
       <Router>
         <Switch>
           <Route path="/" exact component={Main} />
+          <Route path="/CertificationUrl" component={CertificationUrl} />
           <Sub>
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/certification" exact component={Certification} />
