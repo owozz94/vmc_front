@@ -8,8 +8,6 @@ export default class GoogleButton extends Component {
   handleGoogleResponse = async (response) => {
     const url = "http://3.37.123.157:8000/user/signin";
     //body
-    response.tokenId = response.tokenId;
-    response.accessToken = response.accessToken;
     const data = {
       idToken: response.tokenId,
     };

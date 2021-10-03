@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ProjectTitle from "./ProjectTitle";
-import GoogleLogin from "./GoogleLogin";
+import GoogleButton from "./GoogleButton";
 import styles from "../../css/MainTop.module.css";
 // className = {styles.(클래스명)}
 export default class MainTop extends Component {
@@ -15,7 +15,7 @@ export default class MainTop extends Component {
         <div className={styles.container}>
           <section className={styles.section}>
             <ProjectTitle></ProjectTitle>
-            <GoogleLogin></GoogleLogin>
+            <GoogleButton></GoogleButton>
           </section>
         </div>
       </div>
