@@ -1,18 +1,18 @@
 name: React build
 on: 
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
-#   push:
-#     branches:
-#       - main
+#   workflow_dispatch:
+#     inputs:
+#       name:
+#         description: 'Person to greet'
+#         required: true
+#         default: 'Mona the Octocat'
+#       home:
+#         description: 'location'
+#         required: false
+#         default: 'The Octoverse'
+  push:
+    branches:
+      - main
 
 jobs:
   build:
