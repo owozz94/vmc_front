@@ -20,7 +20,7 @@ export default function GoogleButton() {
       method: "post",
       url: url,
       data: data,
-      headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + response.accessToken, "Content-Security-Policy": "upgrade-insecure-requests" },
+      headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + response.accessToken },
     }) //서버에서 받은 response
       .then((res) => {
         console.log(res.data);
