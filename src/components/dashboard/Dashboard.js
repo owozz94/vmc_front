@@ -5,8 +5,11 @@ import Paper from "@mui/material/Paper";
 import DashBoardCertifications from "./DashBoardCertifications";
 import MarketBanner from "./MarketBanner";
 import Orders from "./Orders";
+import { useSelector } from "react-redux";
 
 function DashboardContent() {
+  const state = useSelector((state) => state);
+  console.log(state);
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Grid container spacing={3}>
@@ -21,6 +24,7 @@ function DashboardContent() {
               marginRight: 4,
             }}
           >
+            user
             <DashBoardCertifications />
           </Paper>
         </Grid>

@@ -6,12 +6,24 @@ import Routes from "./Routes";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+//redux
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import Reducer from "./modules";
+import { persistStore } from "redux-persist";
+import { PersistGate } from "redux-persist/integration/react";
 
+const store = createStore(Reducer);
+const persistor = persistStore(store);
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
