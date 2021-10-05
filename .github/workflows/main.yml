@@ -1,0 +1,36 @@
+# name: React build
+# on: 
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-18.04
+#     steps:
+#       - name: Checkout main
+#         uses: actions/checkout@main
+        
+#       - name: Cache node modules
+#         uses: actions/cache@v1
+#         with:
+#           path: node_modules # 캐시를 저장하거나 복원할 디렉토리
+#           key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }} # 캐시를 저장하거나 복원할 때 사용되는 유니크한 키 값
+#           restore-keys: | # 키 값이 기존의 캐시와 일치하지 않는 경우 사용되는 대체 키 값 리스트(optional)
+#             ${{ runner.OS }}-build-
+#             ${{ runner.OS }}-
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Build 
+#         run: npm run build
+        
+#       - name: Deploy to S3
+#         env:
+#           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         run: |
+#           aws s3 cp \
+#             --recursive \
+#             --region ap-northeast-2 \
+#             dist s3://vmc-front-prd
