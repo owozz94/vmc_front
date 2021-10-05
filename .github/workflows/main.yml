@@ -1,3 +1,39 @@
+name: React build
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
+#   push:
+#     branches:
+#       - main
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@main
+        
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build 
+        run: npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
+
+
+
 # name: React build
 # on: 
 #   push:
