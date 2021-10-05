@@ -44,8 +44,8 @@ export const mainListItems = (
         <PersonIcon />
       </ListItemIcon>
       {/* <ListItemText primary="Profile" /> */}
-      <Link to="/profile" style={{ color: "black", textDecoration: "none" }}>
-        Profile{" "}
+      <Link to="/Mypage" style={{ color: "black", textDecoration: "none" }}>
+        My page{" "}
       </Link>
     </ListItem>
   </div>
