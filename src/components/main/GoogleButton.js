@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setAccessToken } from "../../modules/Reducer";
-const clientId = "386426216239-l87un6b97csk16831jm6m3f8t82iqigf.apps.googleusercontent.com";
+const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
 
 export default function GoogleButton() {
   const u = useSelector((state) => state);
