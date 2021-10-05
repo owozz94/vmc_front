@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import PropTypes from 'prop-types'
 import { Button, Row, Col, Card, Container } from 'react-bootstrap'
-import styles from '../../css/CertiForm.css'
 
 
 const CertiForm=(props)=> {

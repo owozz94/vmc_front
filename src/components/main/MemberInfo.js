@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
+// import PropTypes from 'prop-types'
 import {Image, Card, Button} from 'react-bootstrap'
 import styles from '../../css/MemberInfo.css'
 // import {Button} from 'react-bootstrap'
