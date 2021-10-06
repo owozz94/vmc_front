@@ -72,7 +72,7 @@ export default function Certification() {
   const [coinSymbol, setCoinSymbol] = useState([]);
   //보유 코인종류 갖고오기
   const handleGetCoin = (coin) => {
-    console.log(state.user.accessToken);
+    console.log();
 
     axios({
       method: "get",
@@ -233,7 +233,7 @@ export default function Certification() {
                       <InputLabel id="demo-multiple-checkbox-label">결제 통화 (ex. KRW)</InputLabel>
                       <Select
                         value={paymentCurrency}
-                        onChange={handleGetCoin}
+                        onChange={handleGetPayment}
                         input={<OutlinedInput label="Tag" />}
                         renderValue={(selected) => selected.join(", ")}
                         MenuProps={MenuProps}
