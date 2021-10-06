@@ -8,8 +8,6 @@ import Orders from "./Orders";
 import { useSelector } from "react-redux";
 
 function DashboardContent() {
-  const state = useSelector((state) => state);
-  console.log(state);
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Grid container spacing={3}>

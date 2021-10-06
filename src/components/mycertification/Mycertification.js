@@ -10,8 +10,7 @@ export default class Mycertification extends Component {
   render() {
     return (
       <div>
-        {/*       
-        <CertiList></CertiList> */}
+        <CertiList></CertiList>
       </div>
     );
   }
