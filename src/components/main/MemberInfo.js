@@ -1,7 +1,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import {Image, Card, Button} from 'react-bootstrap'
-import styles from '../../css/MemberInfo.css'
+import styles from '../../css/MemberInfo.module.css'
 // import {Button} from 'react-bootstrap'
 
 export default function MemberInfo (props) {

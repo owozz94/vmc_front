@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import AboutSlide from "./AboutSlide";
 import { Button } from "react-bootstrap";
 import ModalManual from "./ModalManual";
