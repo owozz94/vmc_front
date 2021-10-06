@@ -5,7 +5,7 @@ import Main from "./components/main/Main";
 import Dashboard from "./components/dashboard/Dashboard";
 import Certification from "./components/certification/Certification";
 import Mycertification from "./components/mycertification/Mycertification";
-import Profile from "./components/profile/Profile";
+import Mypage from "./components/mypage/Mypage";
 import Sub from "./components/layout/Sub";
 import CertificationUrl from "./components/mycertification/CertificationUrl";
 
@@ -20,7 +20,7 @@ export default class Routes extends Component {
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/certification" exact component={Certification} />
             <Route path="/mycertification" exact component={Mycertification} />
-            <Route path="/Profile" exact component={Profile} />
+            <Route path="/mypage" exact component={Mypage} />
           </Sub>
         </Switch>
       </Router>

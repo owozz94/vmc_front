@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import CertiForm from './CertiForm'
 import dummy from '../../db/data.json'
-import styles from '../../css/CertiList.css'
 
 export default class CertiList extends Component {
     static propTypes = {
@@ -51,13 +50,3 @@ export default class CertiList extends Component {
 // 데이터
 // 코인명 / 시작기간,종료기간 / 거래량 / 거래소 / 수익률 / 평가손익
 // url 복사하기 버튼
-
-
-{/* <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-<ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-<ListGroup.Item variant="success">Success</ListGroup.Item>
-<ListGroup.Item variant="danger">Danger</ListGroup.Item>
-<ListGroup.Item variant="warning">Warning</ListGroup.Item>
-<ListGroup.Item variant="info">Info</ListGroup.Item>
-<ListGroup.Item variant="light">Light</ListGroup.Item>
-<ListGroup.Item variant="dark">Dark</ListGroup.Item> */}

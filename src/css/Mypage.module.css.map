@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,IAAI;CAOnB;;AATD,AAGI,eAHW,CAGX,cAAc,CAAC;EACX,OAAO,EAAE,IAAI;CAIhB;;AARL,AAKQ,eALO,CAGX,cAAc,GAET,CAAC,CAAC;EACC,YAAY,EAAE,GAAG;CACpB",
+    "sources": [
+        "Mypage.module.scss"
+    ],
+    "names": [],
+    "file": "Mypage.module.css"
+}

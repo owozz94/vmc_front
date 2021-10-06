@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "http://3.37.123.157:8000", //서버 포트
+      target: "https://3.37.123.157:8000", //서버 포트
       changeOrigin: true,
     })
   );
