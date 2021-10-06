@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ProjectSlide from './AboutSlide'
+import AboutSlide from './AboutSlide'
 import { Button } from 'react-bootstrap'
+import ModalManual from './ModalManual'
 
-export default class AboutProject extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
+export default function AboutProject () {
 
-    render() {
+    const [modalShow, setModalShow] = React.useState(false);
+
         return (
             <div>
-                <ProjectSlide></ProjectSlide>               
-                <Button variant="primary">증명서 발급 매뉴얼</Button> 
+                <AboutSlide></AboutSlide>               
+                <Button variant="primary" onClick={() => setModalShow(true)}>
+                    증명서 발급 메뉴얼
+                </Button>
+                <ModalManual
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
             </div>
         )
-    }
 }
