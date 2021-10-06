@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import {Modal, Button} from 'react-bootstrap'
 
 function ModalManual(props) {
@@ -24,7 +23,7 @@ return (
             </li>
             <li>
                 2) key 입력
-                <a href="https://www.bithumb.com/customer_support/info_guide?seq=1901&categorySeq=205" target="_blank">key 발급 방법 알아보기</a>
+                <a href="https://www.bithumb.com/customer_support/info_guide?seq=1901&categorySeq=205" target="_blank" rel="noreferrer">key 발급 방법 알아보기</a>
             </li>
             <li>
                 3) 수익 조회

@@ -1,4 +1,8 @@
-.title {
+.container {
+  margin-bottom: 10px;
+}
+
+.container .title {
   font-size: 5rem;
   font-weight: bolder;
   -webkit-animation: moveTitle 1.5s forwards;
@@ -31,7 +35,7 @@
   }
 }
 
-.intro {
+.container .intro {
   display: inline-block;
   margin-top: 15px;
   -webkit-animation: moveIntro 1.5s forwards;
@@ -55,4 +59,4 @@
     opacity: 1;
   }
 }
-/*# sourceMappingURL=ProjectIntro.module.css.map */
+/*# sourceMappingURL=ProjectTitle.module.css.map */

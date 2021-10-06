@@ -55,22 +55,16 @@
         }
     ],
     "certiList": [{
-        "id": "1",
-        "coin": "BTC",
-        "start": "2019.02.01",
-        "end": "2019.08.01",
-        "amount": "0.76",
-        "app": "bithumb",
-        "rate": "+15",
-        "profit": "1129,000"
-    }, {
-        "id": "2",
-        "coin": "BTC",
-        "start": "2020.02.01",
-        "end": "2020.08.01",
-        "amount": "1.08",
-        "app": "upbit",
-        "rate": "+7",
-        "profit": "500,000"
+        "id": "6153094e1fc2f34655124588",
+        "user_id": "test",
+        "exchange_name": "Bithumb",
+        "start_date": "2021-01-01",
+        "end_date": "2021-01-10",
+        "order_currency": "OMG",
+        "payment_currency": "KRW",
+        "units": "10.55",
+        "profit": "-10000",
+        "avarage_cost": "17,000",
+        "image_url": "https://vmc-bucket.s3.ap-northeast-2.amazonaws.com/verification/f84e87be-abb1-4c5b-89af-9ea75fcd1e22"
     }]
 }

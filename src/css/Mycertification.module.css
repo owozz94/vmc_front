@@ -1,0 +1,21 @@
+.container {
+  padding: 0 auto;
+  height: 100vh;
+}
+
+.container .background .hd .kor {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.container .background .hd .eng {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+}
+
+.container .background .certiList {
+  width: 750px;
+  margin: 5vh auto;
+}
+/*# sourceMappingURL=Mycertification.module.css.map */
