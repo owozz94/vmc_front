@@ -3,7 +3,7 @@ import GoogleLogin from "react-google-login";
 import { createBrowserHistory } from "history";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { setData, setJwt } from "../../modules/Reducer";
+import { setData } from "../../modules/Reducer";
 import ComAxios, { setJwtTokenCookie } from "./../../util/ComAxios";
 const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
 
@@ -29,7 +29,7 @@ export default function GoogleButton() {
 
         if (res.data.code === 1000) {
           setJwtTokenCookie(res.headers.jwt);
-          dispatch(res.data);
+          dispatch(setData(res.data));
 
           let history = createBrowserHistory({ forceRefresh: true });
           history.push("/dashboard");
