@@ -5,7 +5,7 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setData, setJwt } from "../../modules/Reducer";
 import ComAxios, { setJwtTokenCookie } from "./../../util/ComAxios";
-const clientId = "386426216239-l87un6b97csk16831jm6m3f8t82iqigf.apps.googleusercontent.com";
+const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
 
 export default function GoogleButton() {
   const u = useSelector((state) => state);
