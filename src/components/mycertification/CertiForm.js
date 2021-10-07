@@ -1,14 +1,17 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import { Button, Row, Col, Card, Container } from 'react-bootstrap'
 import styles from '../../css/CertiForm.module.css'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 function CertiForm(props){
 
-    const handleUrl=()=>{
-
-    }
+    // const handleClickStyle=()=>{
+    //     Button.style = "background: rgba(0,0,0,0) !important;";
+    //         setTimeout(function () {
+    //             console.log('a')
+    //         Button.style = "background: rgba(0,0,0,0.5);";
+    //     }, 1000);
+    // }
 
         return (
             <div className={styles.certiBox}>

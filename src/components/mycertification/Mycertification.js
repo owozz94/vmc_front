@@ -1,17 +1,49 @@
-import React from "react";
+import React, { Component, useState, useEffect, useCallback } from 'react'
 import CertiForm from './CertiForm'
-import dummy from '../../db/data.json'
 import styles from '../../css/Mycertification.module.css'
 
-// import { createBrowserHistory } from "history";
-// import axios from "axios";
-// import { useSelector, useDispatch } from "react-redux";
-// import { setAccessToken } from "../../modules/Reducer";
+//api 호출
+import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+// import { setVerifiedData } from "../../modules/Reducer";
 // const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
 
-
-
 export default function Mycertification (){
+
+
+  const state = useSelector((state) => state);
+  const [lists, setLists] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+
+
+//////////////////////
+  useEffect(()=>{
+    const fetchCerti = async () => {
+      try {
+        setLists(null);
+        setError(null);
+        setLoading(true);
+
+        const res = await axios.get(
+          'http://3.37.123.157:8000/verification', { headers: {"Content-Type": "applicaion/json", Authorization: "Bearer " + state.user.jwt }}
+          );
+        setLists(res.data);
+      } catch(e){
+        setError(e);
+      }
+      setLoading(false);
+    };
+    fetchCerti();
+
+  },[]);
+
+
+
+  if (loading) return <div>...loading</div>;
+  if (error) return <div>에러가 발생했습니다.</div>;
+  if (!lists) return "첫 증명서를 발급받으세요";
 
   return(
     <div className={styles.container}>
@@ -21,7 +53,7 @@ export default function Mycertification (){
           <span className={styles.eng}>My certification</span>
         </div>
       <article className={styles.certiList}>
-      {dummy.certiList.map(certi => (
+      {lists.map(certi => (
                       <CertiForm
                         key={certi.id}
                         id={certi.id}
@@ -41,6 +73,3 @@ export default function Mycertification (){
     </div>
   );
 }
-
-
-  
