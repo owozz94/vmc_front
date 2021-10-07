@@ -4,7 +4,8 @@ import { createBrowserHistory } from "history";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { setData, setJwt } from "../../modules/Reducer";
-const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
+import ComAxios, { setJwtTokenCookie } from "./../../util/ComAxios";
+const clientId = "386426216239-l87un6b97csk16831jm6m3f8t82iqigf.apps.googleusercontent.com";
 
 export default function GoogleButton() {
   const u = useSelector((state) => state);
@@ -27,11 +28,11 @@ export default function GoogleButton() {
         console.log(res);
 
         if (res.data.code === 1000) {
-          dispatch(setJwt(res.headers.jwt));
-          dispatch(setData(res.data));
+          setJwtTokenCookie(res.headers.jwt);
+          dispatch(res.data);
 
-          // let history = createBrowserHistory({ forceRefresh: true });
-          // history.push("/dashboard");
+          let history = createBrowserHistory({ forceRefresh: true });
+          history.push("/dashboard");
         } else {
           alert("로그인에 실패하였습니다.");
         }
