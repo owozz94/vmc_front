@@ -1,5 +1,5 @@
 import { DataGrid } from "@mui/x-data-grid";
-import { useState, React } from "react";
+import { useState, React, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
@@ -11,7 +11,6 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import dayjs from "dayjs";
 import { Fragment } from "react";
-import axios from "axios";
 import { useSelector } from "react-redux";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
@@ -20,9 +19,8 @@ import FormControl from "@mui/material/FormControl";
 import ListItemText from "@mui/material/ListItemText";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
+import ComAxios from "./../../util/ComAxios";
 
-//임시데이터
-// let rows = [{ id: 0, date: "16 Mar, 2019", user_id: "Elvis Presley", exchange_name: "Bithumb", order_currency: "BTC", unitsvv: 0.25(개수), rateOfReturn: 15, profit(수익금): 312044, avarage_cost:평단가 }];
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -35,19 +33,18 @@ const MenuProps = {
   },
 };
 
-// const payment_currency_symbol = [
-//   "Oliver Hansen",
-//   "Van Henry",
-//   "April Tucker",
-//   "Ralph Hubbard",
-//   "Omar Alexander",
-//   "Carlos Abbott",
-//   "Miriam Wagner",
-//   "Bradley Wilkerson",
-//   "Virginia Andrews",
-//   "Kelly Snyder",
-// ];
-const coin_symbol = ["Oliver", "Van ", "April ucker", "Ralph ", "Omar Alexander", "Carlos ", "Miriam ", "Bradley ", "Virginia ", "Kelly "];
+const payment_currency_symbol = [
+  "Oliver Hansen",
+  "Van Henry",
+  "April Tucker",
+  "Ralph Hubbard",
+  "Omar Alexander",
+  "Carlos Abbott",
+  "Miriam Wagner",
+  "Bradley Wilkerson",
+  "Virginia Andrews",
+  "Kelly Snyder",
+];
 
 const columns = [
   { field: "date", headerName: "date", width: 130 },
@@ -66,30 +63,38 @@ const columns = [
 });
 
 export default function Certification() {
+  useEffect(() => {
+    console.log("useEffect 마운트될때");
+    initCoin();
+  }, []);
   const state = useSelector((state) => state);
   const [exchange_id, setExchange_id] = useState();
   const [paymentCurrency, setPaymentCurrency] = useState([]);
   const [coinSymbol, setCoinSymbol] = useState([]);
-  //보유 코인종류 갖고오기
-  const handleGetCoin = (coin) => {
-    console.log();
+  const [coinSymbolList, setCoinSymbolList] = useState([]);
 
-    axios({
+  const initCoin = () => {
+    ComAxios({
       method: "get",
       url: "http://3.37.123.157:8000/transactions/exchange/1/coin",
-
-      // headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + state.user.accessToken },
     })
       .then((coin) => {
-        console.log(coin.code);
-        const {
-          target: { value },
-        } = coin;
-        setCoinSymbol(typeof value === "string" ? value.split(",") : value);
+        console.log(coin.data);
+        const dd = coin.data.data.map((data) => {
+          return data.coin_symbol;
+        });
+        setCoinSymbolList(dd);
       })
       .catch((coin) => {
         console.log(coin);
       });
+  };
+  //보유 코인종류 갖고오기
+  const handleGetCoin = (coin) => {
+    const {
+      target: { value },
+    } = coin;
+    setCoinSymbol(typeof value === "string" ? value.split(",") : value);
   };
   //결제 통화 갖고오기
   const handleGetPayment = (payment) => {
@@ -119,25 +124,17 @@ export default function Certification() {
 
   //calendars
   const [day, setDay] = useState([null, null]);
-  //날짜 포맷
-  const end_date = dayjs(day[0]);
-  console.log(end_date.format("yyyy-MM-dd"));
+  let end_date = dayjs(day[0]);
+  end_date = end_date.format("YYYY-MM-DD");
 
   function handleSearch(response) {
-    console.log(state);
     const data = {
       ...inputs,
       end_date,
     };
-    console.log(inputs);
+    console.log(data);
+    // console.log(end_date);
     //axios 조회
-    // let exchange_id = ""; 아니 exchange_id 어디서 갖고와
-    axios({
-      method: "get", ///tranactions/exchange
-      url: `http://3.37.123.157:8000/tranactions/exchange/${exchange_id}/coin`,
-      data,
-      headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + state.user.accessToken },
-    });
 
     const res = [
       {
@@ -161,28 +158,6 @@ export default function Certification() {
         rateOfReturn: 15,
         profit: 312044,
         avarage_cost: 90888,
-      },
-      {
-        id: 2,
-        date: "19 Mar, 2019",
-        user_id: "Elvis Presley",
-        exchange_name: "Bithumb",
-        order_currency: "BTC",
-        units: 0.25,
-        rateOfReturn: 15,
-        profit: 312044,
-        avarage_cost: 456000,
-      },
-      {
-        id: 3,
-        date: "20 Mar, 2019",
-        user_id: "Elvis Presley",
-        exchange_name: "Bithumb",
-        order_currency: "BTC",
-        units: 0.25,
-        rateOfReturn: 15,
-        profit: 312044,
-        avarage_cost: 343669,
       },
     ]; //가져온 데이터
     setRows(res);
@@ -214,16 +189,10 @@ export default function Certification() {
                   <div>
                     <FormControl sx={{ m: 1, width: 200 }}>
                       <InputLabel id="demo-multiple-checkbox-label">주문 코인 (ex. ADA)</InputLabel>
-                      <Select
-                        value={coinSymbol}
-                        onChange={handleGetCoin}
-                        input={<OutlinedInput label="Tag" />}
-                        renderValue={(selected) => selected.join(", ")}
-                        MenuProps={MenuProps}
-                      >
-                        {coinSymbol.map((data) => (
+
+                      <Select value={coinSymbol} onChange={handleGetCoin} input={<OutlinedInput label="Tag" />} renderValue={(selected) => selected.join(", ")}>
+                        {coinSymbolList.map((data) => (
                           <MenuItem style={{ display: "flex", marginLeft: 10, justifyContent: "left" }} key={data} value={data}>
-                            <Checkbox checked={coinSymbol.indexOf(data) > -1} />
                             <ListItemText primary={data} />
                           </MenuItem>
                         ))}
@@ -238,10 +207,10 @@ export default function Certification() {
                         renderValue={(selected) => selected.join(", ")}
                         MenuProps={MenuProps}
                       >
-                        {coin_symbol.map((coin_symbol) => (
-                          <MenuItem style={{ display: "flex", marginLeft: 10, justifyContent: "left" }} key={coin_symbol} value={coin_symbol}>
-                            <Checkbox checked={paymentCurrency.indexOf(coin_symbol) > -1} />
-                            <ListItemText primary={coin_symbol} />
+                        {payment_currency_symbol.map((payment_currency_symbol) => (
+                          <MenuItem style={{ display: "flex", marginLeft: 10, justifyContent: "left" }} key={payment_currency_symbol} value={payment_currency_symbol}>
+                            <Checkbox checked={paymentCurrency.indexOf(payment_currency_symbol) > -1} />
+                            <ListItemText primary={payment_currency_symbol} />
                           </MenuItem>
                         ))}
                       </Select>
