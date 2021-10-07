@@ -3,6 +3,18 @@
   height: 100vh;
 }
 
+.container .background .hd {
+  width: 750px;
+  margin: auto;
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .container .background .hd .kor {
   color: rgba(0, 0, 0, 0.8);
   margin: 0;
@@ -16,6 +28,41 @@
 
 .container .background .certiList {
   width: 750px;
-  margin: 5vh auto;
+  margin: 10vh auto 5vh auto;
+}
+
+.container .background .addNew {
+  width: 750px;
+  height: 255px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.container .background .addNew p {
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.container .background .addNew p .plusPicto {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.container .background .addNew p:hover {
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=Mycertification.module.css.map */

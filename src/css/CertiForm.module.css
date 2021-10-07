@@ -1,7 +1,6 @@
 .certiBox {
   margin-bottom: 30px;
   width: 100%;
-  border-radius: 20px !important;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
@@ -17,6 +16,30 @@
       -ms-flex-align: center;
           align-items: center;
   background: white;
+}
+
+.certiBox .hd .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.certiBox .hd .title .itemValue {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  margin-right: 8px;
+}
+
+.certiBox .hd .title .itemTag {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7rem;
+  margin-bottom: 2px;
 }
 
 .certiBox .content {
@@ -38,8 +61,27 @@
   font-size: 0.7rem;
 }
 
-.certiBox button {
+.certiBox ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.certiBox ul li {
+  margin-left: 8px;
+}
+
+.certiBox ul li button {
   font-size: 0.8rem;
-  padding: 5px 10px;
+  padding: 3px 8px;
+  border: 1px solid white;
+}
+
+.certiBox ul li button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
 }
 /*# sourceMappingURL=CertiForm.module.css.map */
