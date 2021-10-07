@@ -3,7 +3,7 @@ import GoogleLogin from "react-google-login";
 import { createBrowserHistory } from "history";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { setAccessToken } from "../../modules/Reducer";
+import { setData, setJwt } from "../../modules/Reducer";
 const clientId = "347213939670-lgktcl3k8h266eabnk37r12e6a3c2fot.apps.googleusercontent.com";
 
 export default function GoogleButton() {
@@ -24,11 +24,14 @@ export default function GoogleButton() {
       headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + response.accessToken },
     }) //서버에서 받은 response
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
+
         if (res.data.code === 1000) {
-          dispatch(setAccessToken(response.accessToken));
-          let history = createBrowserHistory({ forceRefresh: true });
-          history.push("/dashboard");
+          dispatch(setJwt(res.headers.jwt));
+          dispatch(setData(res.data));
+
+          // let history = createBrowserHistory({ forceRefresh: true });
+          // history.push("/dashboard");
         } else {
           alert("로그인에 실패하였습니다.");
         }

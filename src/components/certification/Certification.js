@@ -20,6 +20,7 @@ import FormControl from "@mui/material/FormControl";
 import ListItemText from "@mui/material/ListItemText";
 import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
+
 //임시데이터
 // let rows = [{ id: 0, date: "16 Mar, 2019", user_id: "Elvis Presley", exchange_name: "Bithumb", order_currency: "BTC", unitsvv: 0.25(개수), rateOfReturn: 15, profit(수익금): 312044, avarage_cost:평단가 }];
 const ITEM_HEIGHT = 48;
@@ -65,18 +66,22 @@ const columns = [
 });
 
 export default function Certification() {
+  const state = useSelector((state) => state);
   const [exchange_id, setExchange_id] = useState();
   const [paymentCurrency, setPaymentCurrency] = useState([]);
   const [coinSymbol, setCoinSymbol] = useState([]);
   //보유 코인종류 갖고오기
   const handleGetCoin = (coin) => {
+    console.log();
+
     axios({
       method: "get",
-      url: "http://3.37.123.157:8000/tranactions/exchange/{exchange_id}/coin",
-      headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + coin.accessToken },
+      url: "http://3.37.123.157:8000/transactions/exchange/1/coin",
+
+      // headers: { "Content-Type": "applicaion/json", Authorization: "Bearer " + state.user.accessToken },
     })
       .then((coin) => {
-        console.log(coin);
+        console.log(coin.code);
         const {
           target: { value },
         } = coin;
@@ -117,7 +122,6 @@ export default function Certification() {
   //날짜 포맷
   const end_date = dayjs(day[0]);
   console.log(end_date.format("yyyy-MM-dd"));
-  const state = useSelector((state) => state);
 
   function handleSearch(response) {
     console.log(state);
