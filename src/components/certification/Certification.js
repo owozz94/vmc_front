@@ -33,19 +33,6 @@ const MenuProps = {
   },
 };
 
-const payment_currency_symbol = [
-  "Oliver Hansen",
-  "Van Henry",
-  "April Tucker",
-  "Ralph Hubbard",
-  "Omar Alexander",
-  "Carlos Abbott",
-  "Miriam Wagner",
-  "Bradley Wilkerson",
-  "Virginia Andrews",
-  "Kelly Snyder",
-];
-
 const columns = [
   { field: "date", headerName: "date", width: 130 },
   { field: "user_id", headerName: "user_id", width: 130 },
@@ -66,13 +53,14 @@ export default function Certification() {
   useEffect(() => {
     console.log("useEffect 마운트될때");
     initCoin();
+    initPayment();
   }, []);
   const state = useSelector((state) => state);
-  const [exchange_id, setExchange_id] = useState();
+  const [paymentCurrencyList, setPaymentCurrencyList] = useState([]);
   const [paymentCurrency, setPaymentCurrency] = useState([]);
   const [coinSymbol, setCoinSymbol] = useState([]);
   const [coinSymbolList, setCoinSymbolList] = useState([]);
-
+  //코인 가져오기
   const initCoin = () => {
     ComAxios({
       method: "get",
@@ -80,23 +68,41 @@ export default function Certification() {
     })
       .then((coin) => {
         console.log(coin.data);
-        const dd = coin.data.data.map((data) => {
+        const coinList = coin.data.data.map((data) => {
           return data.coin_symbol;
         });
-        setCoinSymbolList(dd);
+        setCoinSymbolList(coinList);
       })
       .catch((coin) => {
         console.log(coin);
       });
   };
-  //보유 코인종류 갖고오기
+  //결제 통화 가져오기
+  const initPayment = () => {
+    ComAxios({
+      method: "get",
+      url: "http://3.37.123.157:8000/transactions/exchange/1/payment-currency",
+    })
+      .then((payment) => {
+        console.log(payment.data);
+        const coinList = payment.data.data.map((data) => {
+          return data.payment_currency_symbol;
+        });
+        setPaymentCurrencyList(coinList);
+      })
+      .catch((payment) => {
+        console.log(payment);
+      });
+  };
+
+  //코인 종류 선택
   const handleGetCoin = (coin) => {
     const {
       target: { value },
     } = coin;
     setCoinSymbol(typeof value === "string" ? value.split(",") : value);
   };
-  //결제 통화 갖고오기
+  //결제 통화 선택
   const handleGetPayment = (payment) => {
     const {
       target: { value },
@@ -132,36 +138,6 @@ export default function Certification() {
       ...inputs,
       end_date,
     };
-    console.log(data);
-    // console.log(end_date);
-    //axios 조회
-
-    const res = [
-      {
-        id: 0,
-        date: "17 Mar, 2019",
-        user_id: "Elvis Presley",
-        exchange_name: "Bithumb",
-        order_currency: "BTC",
-        units: 0.25,
-        rateOfReturn: 15,
-        profit: 312044,
-        avarage_cost: 14999,
-      },
-      {
-        id: 1,
-        date: "18 Mar, 2019",
-        user_id: "Elvis Presley",
-        exchange_name: "Bithumb",
-        order_currency: "BTC",
-        units: 0.25,
-        rateOfReturn: 15,
-        profit: 312044,
-        avarage_cost: 90888,
-      },
-    ]; //가져온 데이터
-    setRows(res);
-    //setPage(0);
   }
   const handleAlert = () => {
     alert("발행되었습니다.");
@@ -200,17 +176,10 @@ export default function Certification() {
                     </FormControl>
                     <FormControl sx={{ m: 1, width: 200 }}>
                       <InputLabel id="demo-multiple-checkbox-label">결제 통화 (ex. KRW)</InputLabel>
-                      <Select
-                        value={paymentCurrency}
-                        onChange={handleGetPayment}
-                        input={<OutlinedInput label="Tag" />}
-                        renderValue={(selected) => selected.join(", ")}
-                        MenuProps={MenuProps}
-                      >
-                        {payment_currency_symbol.map((payment_currency_symbol) => (
-                          <MenuItem style={{ display: "flex", marginLeft: 10, justifyContent: "left" }} key={payment_currency_symbol} value={payment_currency_symbol}>
-                            <Checkbox checked={paymentCurrency.indexOf(payment_currency_symbol) > -1} />
-                            <ListItemText primary={payment_currency_symbol} />
+                      <Select value={paymentCurrency} onChange={handleGetPayment} input={<OutlinedInput label="Tag" />} renderValue={(selected) => selected.join(", ")}>
+                        {paymentCurrencyList.map((data) => (
+                          <MenuItem style={{ display: "flex", marginLeft: 10, justifyContent: "left" }} key={data} value={data}>
+                            <ListItemText primary={data} />
                           </MenuItem>
                         ))}
                       </Select>
