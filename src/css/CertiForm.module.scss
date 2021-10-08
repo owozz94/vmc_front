@@ -1,7 +1,6 @@
 .certiBox {
     margin-bottom: 30px;
     width: 100%;
-    border-radius: 20px !important;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     .hd {
         // font-weight: bolder;
@@ -12,7 +11,22 @@
         background: white;
         // background: #212529;
         // color: white;
-        .title {}
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .itemValue {
+                color: rgba(0, 0, 0, 0.8);
+                margin: 0;
+                margin-right: 8px;
+                // line-height: 0;
+            }
+            .itemTag {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 0.7rem;
+                margin-bottom: 2px;
+            }
+        }
     }
     .content {
         list-style: none;
@@ -29,12 +43,26 @@
             }
         }
     }
-    button {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        // background-color: #212529;
-        //  :hover {
-        // background-color: #222222;
-        // }
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-left: 8px;
+            button {
+                font-size: 0.8rem;
+                padding: 3px 8px;
+                // background-color: #212529;
+                //  :hover {
+                // background-color: #222222;
+                // }
+                border: 1px solid rgb(255, 255, 255);
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    border: 1px solid rgb(0, 0, 0);
+                }
+            }
+        }
     }
 }

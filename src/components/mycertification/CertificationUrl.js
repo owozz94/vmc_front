@@ -1,9 +1,44 @@
+
 import React from "react";
 import checked from "../../img/checked.png";
 import { Fragment } from "react";
 import Paper from "@mui/material/Paper";
 
-export default function CertificationUrl(response) {
+import ComAxios from "../../util/ComAxios";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+
+export default function CertificationUrl() {
+
+  // useEffect(() => {
+  //   console.log("useEffect 마운트될때");
+  //   initUrl();
+  // }, []);
+
+  // const state = useSelector((state) => state);
+  // const [content, setContent] = useState();
+
+  // const initUrl = () => {
+  //   ComAxios({
+  //     method: "get",
+  //     url: "http://3.37.123.157:8000/verification/{verification_id}",
+  //   })
+  //     .then((coin) => {
+  //       console.log(coin.data);
+  //       const dd = coin.data.data.map((data) => {
+  //         return data.coin_symbol;
+  //       });
+  //       setCoinSymbolList(dd);
+  //     })
+  //     .catch((coin) => {
+  //       console.log(coin);
+  //     });
+  // };
+
+// end axios
+
+
+
   return (
     <Fragment>
       <h4 style={{ textAlign: "center", marginTop: 20 }}>Verify My Coin</h4>

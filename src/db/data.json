@@ -54,7 +54,7 @@
             "git": "https://"
         }
     ],
-    "certiList": [{
+    "verifiedLists": [{
         "id": "6153094e1fc2f34655124588",
         "user_id": "test",
         "exchange_name": "Bithumb",
