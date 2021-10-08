@@ -1,68 +1,170 @@
-.certiBox {
-    margin-bottom: 30px;
-    width: 100%;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    .hd {
-        // font-weight: bolder;
-        // border-bottom: 1px solid gray;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: white;
-        // background: #212529;
-        // color: white;
-        .title {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            .itemValue {
-                color: rgba(0, 0, 0, 0.8);
+        .certiBox {
+            margin-bottom: 30px;
+            width: 100%;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+            .hd {
+                // font-weight: bolder;
+                // border-bottom: 1px solid gray;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: white;
+                // background: #212529;
+                // color: white;
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .itemValue {
+                        color: rgba(0, 0, 0, 0.8);
+                        margin: 0;
+                        margin-right: 8px;
+                        // line-height: 0;
+                    }
+                    .itemTag {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 0.7rem;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+            .content {
+                list-style: none;
+                .item {
+                    text-align: right;
+                    margin: 10px;
+                    .itemValue {
+                        color: rgba(0, 0, 0, 0.8);
+                        margin: 0;
+                    }
+                    .itemTag {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+                display: flex;
                 margin: 0;
-                margin-right: 8px;
-                // line-height: 0;
-            }
-            .itemTag {
-                color: rgba(0, 0, 0, 0.5);
-                font-size: 0.7rem;
-                margin-bottom: 2px;
-            }
-        }
-    }
-    .content {
-        list-style: none;
-        .item {
-            text-align: right;
-            margin: 10px;
-            .itemValue {
-                color: rgba(0, 0, 0, 0.8);
-                margin: 0;
-            }
-            .itemTag {
-                color: rgba(0, 0, 0, 0.5);
-                font-size: 0.7rem;
-            }
-        }
-    }
-    ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-        li {
-            margin-left: 8px;
-            button {
-                font-size: 0.8rem;
-                padding: 3px 8px;
-                // background-color: #212529;
-                //  :hover {
-                // background-color: #222222;
-                // }
-                border: 1px solid rgb(255, 255, 255);
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.8);
-                    border: 1px solid rgb(0, 0, 0);
+                padding: 0;
+                li {
+                    margin-left: 8px;
+                    button {
+                        position: relative;
+                        font-size: 0.8rem;
+                        padding: 3px 8px;
+                        // background-color: #212529;
+                        //  :hover {
+                        // background-color: #222222;
+                        // }
+                        border: 1px solid rgb(255, 255, 255);
+                        &:hover {
+                            border: 1px solid rgb(0, 0, 0);
+                        }
+                    }
+                    &:nth-of-type(1) {
+                        button {
+                            &:before {
+                                content: '텍스트url복사';
+                                display: inline-block;
+                                position: absolute;
+                                left: 0;
+                                bottom: -180%;
+                                width: 60px;
+                                background: white;
+                                border: 1px solid rgba(0, 0, 0, 0.4);
+                                border-radius: 3px;
+                                color: black;
+                                clear: both;
+                                opacity: 0;
+                            }
+                            &:hover {
+                                &:before {
+                                    content: 'url복사(텍스트)';
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -180%;
+                                    width: 60px;
+                                    background: white;
+                                    border: 1px solid rgba(0, 0, 0, 0.4);
+                                    border-radius: 3px;
+                                    color: black;
+                                    clear: both;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        button {
+                            &:before {
+                                content: '이미지url복사';
+                                display: inline-block;
+                                position: absolute;
+                                left: 0;
+                                bottom: -180%;
+                                width: 60px;
+                                background: white;
+                                border: 1px solid rgba(0, 0, 0, 0.4);
+                                border-radius: 3px;
+                                color: black;
+                                clear: both;
+                                opacity: 0;
+                            }
+                            &:hover {
+                                &:before {
+                                    content: 'url복사(이미지)';
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -180%;
+                                    width: 60px;
+                                    background: white;
+                                    border: 1px solid rgba(0, 0, 0, 0.4);
+                                    border-radius: 3px;
+                                    color: black;
+                                    clear: both;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        button {
+                            &:before {
+                                content: '이미지 다운로드 ';
+                                display: inline-block;
+                                position: absolute;
+                                left: 0;
+                                bottom: -180%;
+                                width: 60px;
+                                background: white;
+                                border: 1px solid rgba(0, 0, 0, 0.4);
+                                border-radius: 3px;
+                                color: black;
+                                clear: both;
+                                opacity: 0;
+                            }
+                            &:hover {
+                                &:before {
+                                    content: '이미지 다운로드';
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -180%;
+                                    width: 60px;
+                                    background: white;
+                                    border: 1px solid rgba(0, 0, 0, 0.4);
+                                    border-radius: 3px;
+                                    color: black;
+                                    clear: both;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-    }
-}

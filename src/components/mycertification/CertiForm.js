@@ -68,7 +68,7 @@ function CertiForm(props){
         console.log('a')
         ComAxios({
             method: "get",
-            url: "http://3.37.123.157:8000/verification/image/download/verification_id}",
+            url: "http://3.37.123.157:8000/verification/image/download/verification_id}"
           })
     }
 
@@ -92,13 +92,13 @@ function CertiForm(props){
                                         <BsFileEarmarkFontFill />
                                     </Button>
                                 </CopyToClipboard>
-                                <Overlay target={target.current} show={show} placement="right">
-                                    {/* {(props) => ( */}
+                                {/* <Overlay target={target.current} show={show} placement="right">
+                                    {(props) => (
                                         <Tooltip id="overlay-example">
                                         복사 완료
                                         </Tooltip>
-                                    {/* )} */}
-                                </Overlay>
+                                    )}
+                                </Overlay> */}
                             </li>
                             <li>
                                 <CopyToClipboard text={ props.url }>
