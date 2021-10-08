@@ -1,18 +1,14 @@
-// eslint-disable-next-line
-import React from 'react'
-// import PropTypes from 'prop-types'
-import {Col, Row} from 'react-bootstrap'
-import styles from '../../css/MyInfo.module.css'
-import axios from 'axios';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import {Table, Col, Row} from 'react-bootstrap'
+import styles from '../../css/ProfileInfo.module.css'
 
-export default function MyInfo () {
+export default class ProfileInfo extends Component {
+    static propTypes = {
+        prop: PropTypes
+    }
 
-    axios.get("http://3.37.123.157:8000/user/userInfo")
-    .then((Response)=>{console.log('성공')})
-    // .then((Response)=>{console.log(Response.data)})
-    // .catch((Error)=>{console.log(Error)})
-    .catch((Error)=>{console.log('에러')})
-
+    render() {
         return (
             <div className={styles.InfoTable}>
                 <article className={styles.InfoCategory}>
@@ -71,4 +67,5 @@ export default function MyInfo () {
 
             </div>
         )
+    }
 }

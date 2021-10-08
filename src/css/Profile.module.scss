@@ -1,0 +1,10 @@
+.ProfileContent {
+    padding: 0 20%;
+    margin-top: 10vh;
+    .deleteContent {
+        display: flex;
+        >p {
+            margin-right: 8px;
+        }
+    }
+}
