@@ -1,4 +1,3 @@
-
 import React from "react";
 import checked from "../../img/checked.png";
 import { Fragment } from "react";
@@ -9,7 +8,6 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 
 export default function CertificationUrl() {
-
   // useEffect(() => {
   //   console.log("useEffect 마운트될때");
   //   initUrl();
@@ -35,9 +33,7 @@ export default function CertificationUrl() {
   //     });
   // };
 
-// end axios
-
-
+  // end axios
 
   return (
     <Fragment>

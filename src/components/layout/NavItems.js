@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 //   <ListItem button> << 쓰면 dataGrid랑 충돌 일어남.
 export const mainListItems = (
   <div>
-    <ListItem>
+    {/* <ListItem>
       <ListItemIcon>
         <DashboardIcon />
-      </ListItemIcon>
-      {/* <ListItemText primary="Dashbaord" /> */}
-      <Link to="/dashboard" style={{ color: "black", textDecoration: "none" }}>
+      </ListItemIcon> */}
+    {/* <ListItemText primary="Dashbaord" /> */}
+    {/* <Link to="/dashboard" style={{ color: "black", textDecoration: "none" }}>
         Dashboard
       </Link>
-    </ListItem>
+    </ListItem> */}
 
     <ListItem>
       <ListItemIcon>
