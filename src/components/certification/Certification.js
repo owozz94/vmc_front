@@ -116,7 +116,7 @@ export default function Certification() {
     order_currency: "",
     payment_currency: "",
   });
-  const { api_key, secret_key, order_currency, payment_currency } = inputs;
+  const { api_key, secret_key } = inputs;
   const handleOnChange = (e) => {
     const { value, name } = e.target;
     setInput({
