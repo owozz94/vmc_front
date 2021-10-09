@@ -9,7 +9,6 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import dayjs from "dayjs";
 import { Fragment } from "react";
-import { useSelector } from "react-redux";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -122,11 +121,12 @@ export default function Certification() {
         alert("다시 입력해주세요.");
       });
   }
-
+  let dd = 1234;
   return (
     //Container 시작
     <Container maxWidth="lg" align="center" sx={{ mt: 10, mb: 4 }}>
       <Box sx={{ width: "67%" }}>
+        <article></article>
         <Paper sx={{ width: "100%", height: 500, mb: 2, pl: 5, pr: 5, pt: 3 }}>
           <h4 style={{ marginTop: 30 }}>인증서 발급하기</h4>
           {/* 

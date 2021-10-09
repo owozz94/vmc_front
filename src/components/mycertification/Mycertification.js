@@ -10,7 +10,7 @@ import { BsPlusCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 export default function Mycertification() {
-  const [verifiedLists, setVerifiedLists] = useState({});
+  const [verifiedLists, setVerifiedLists] = useState([]);
 
   useEffect(() => {
     console.log("useEffect 마운트될때");
@@ -39,7 +39,7 @@ export default function Mycertification() {
             <p className={styles.kor}>증명서 목록</p>
             <span className={styles.eng}>My certification</span>
             </div> */}
-        <article className={styles.certiList}>
+        <div className={styles.certiList}>
           {verifiedLists.map((data) => (
             <CertiForm
               key={data.id}
@@ -55,7 +55,7 @@ export default function Mycertification() {
               url={data.image_url}
             ></CertiForm>
           ))}
-        </article>
+        </div>
         <div className={styles.addNew}>
           <Link to="/certification" style={{ color: "black", textDecoration: "none" }}>
             <p>
